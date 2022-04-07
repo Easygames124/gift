@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import classes from './WeatherPage.module.css';
 import AboutNowWeather from '../../AboutNowWeather/AboutNowWeather';
-import WeatherForecast from '../../WeatherForecast/WeatherForecast';
+// import WeatherForecast from '../../WeatherForecast/WeatherForecast';
 import GeoEnable from '../../GeoEnable/GeoEnable';
 
 const WeatherPage = (props) => {
@@ -15,7 +15,7 @@ const WeatherPage = (props) => {
                     <h1>Погода</h1>
                 </div>
                 <AboutNowWeather theme={props.theme} className="mb-5" coords={props.coords}/>
-                <WeatherForecast
+                {/* <WeatherForecast
                     theme={props.theme}
                     graph
                     isWeatherGraph={props.isWeatherGraph}
@@ -23,7 +23,7 @@ const WeatherPage = (props) => {
                     isForbiddenWeatherGraph={props.isForbiddenWeatherGraph}
                     setIsForbiddenWeatherGraph={props.setIsForbiddenWeatherGraph}
                     coords={props.coords}
-                />
+                /> */}
             </div>
          :
          <GeoEnable
