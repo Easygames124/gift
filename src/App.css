@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  min-height: 150%;
+  user-select: none;
+}
+.blue {
+  color: #4361ee;
+}
+.green {
+  color: #06d6a0;
+}
+.blur {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.6);
+  display: block;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+.swiper {
+  min-height: 100px;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px 2px rgb(0 0 0 / 10%);
+}
+.swiper-wrapper {
+  min-height: 100px;
+}
+.swiper-slide {
+  background: #fff;
+  min-height: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms !important;
+}
+.swiper-slide * {
+  color: #444 !important;
+}
+.swiper-slide:nth-child(even) {
+  background: rgb(245, 245, 245);
+  color: #000;
+}
+.swiper-slide:hover {
+  background: rgb(230, 230, 230);
+}
+.swiper.dark .swiper-slide {
+  background: #191919;
+}
+.swiper.dark .swiper-slide * {
+  color: #fff !important;
+}
+.swiper.dark .swiper-slide:nth-child(even) {
+  background: #161616;
+}
+.swiper.dark .swiper-slide:hover {
+  background: #121212;
+}
+[data-tooltip] {
+  position: relative;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  width: 250px;
+  left: 0; top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5em;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 3000;
+  font-weight: 400;
+  transition: 200ms;
+} 
+[data-tooltip]:hover::after {
+  opacity: 1;
+  top: calc(2em + 10px);
+}

@@ -1,0 +1,17 @@
+.myBtn {
+    background: none;
+    border: none;
+    outline: none;
+    color: #333;
+    cursor: pointer;
+    transition: all 100ms;
+}
+.myBtn:hover {
+    color: black;
+}
+.myBtn:hover:active {
+    transform: scale(0.95);
+}
+.dark {
+    filter: invert(100%);
+}

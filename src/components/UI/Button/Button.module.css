@@ -1,0 +1,24 @@
+.myBtn {
+    padding: 5px 15px;
+    color: #4361ee;
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid #4361ee;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.myBtn:hover {
+    background: #4361ee;
+    color: white;
+}
+.myBtn:active {
+    transform: scale(0.9);
+}
+.myBtn:disabled:hover {
+    cursor: not-allowed;
+    background: transparent;
+    color: #4361ee;
+}
+.myBtn:focus-visible {
+    outline: none;
+}
